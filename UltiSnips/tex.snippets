@@ -66,8 +66,15 @@ snippet prop "Proposition" bi
 \end{prop}
 endsnippet
 
-snippet thrm "Theorem" bi
+snippet thm "Theorem" bi
 \begin{theorem}[$1]
+	${0:${VISUAL}}
+\end{theorem}
+endsnippet
+
+snippet thml "Theorem" bi
+\begin{theorem}[$1]
+	\label{th:$2}
 	${0:${VISUAL}}
 \end{theorem}
 endsnippet
@@ -217,8 +224,8 @@ snippet inmath "Inline Math" w
 \\(${1}\\) $0
 endsnippet
 
-snippet im "Inline Math $" A
-$$${1}$$ $0
+snippet im "Inline Math $" w
+$${1}$ $0
 endsnippet
 
 snippet dm "Display Math" w
