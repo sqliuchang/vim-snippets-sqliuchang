@@ -227,7 +227,10 @@ snippet DD "D" w
 endsnippet
 
 snippet inmath "Inline Math" w
-\\(${1}\\) $0
+\\(
+	${1:${VISUAL}}
+\\) 
+$0
 endsnippet
 
 snippet im "Inline Math $" w
