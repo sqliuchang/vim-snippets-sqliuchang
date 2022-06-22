@@ -233,14 +233,20 @@ snippet inmath "Inline Math" w
 $0
 endsnippet
 
-snippet im "Inline Math $" w
-$${1}$$0
+snippet im "Inline Math $" wA
+ $${1}$`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+    snip.rv = ' '
+else:
+    snip.rv = ''
+`$2
 endsnippet
 
-snippet dm "Display Math" w
+snippet dm "Display Math" wA
 \[
 	${1:${VISUAL}}
-\]$0
+\]
+$0
 endsnippet
 
 snippet frac "Fraction" w
@@ -300,7 +306,10 @@ snippet pmat "Pmat" w
 endsnippet
 
 snippet bmat "Bmat" w
-\begin{bmatrix} $1 \end{bmatrix} $0
+\begin{bmatrix} 
+	$1 
+\end{bmatrix}
+$0
 endsnippet
 
 snippet () "Left( right)" w
